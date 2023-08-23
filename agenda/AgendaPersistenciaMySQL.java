@@ -4,15 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class AgendaPersistenciaMySQL implements AgendaPersistencia {
 
     @Override
-    public void salvar(ArrayList<Contato> contatos) throws SQLException {
+    public void salvar(ArrayList<Contato> contatos) throws Exception {
 
+        //Class.forName("org.mariadb.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/agenda";
         String usuario = "root";
         String senha = "root";
@@ -34,8 +34,10 @@ public class AgendaPersistenciaMySQL implements AgendaPersistencia {
     }
 
     @Override
-    public ArrayList<Contato> carregar() throws SQLException {
+    public ArrayList<Contato> carregar() throws Exception {
 
+
+        //Class.forName("org.mariadb.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/agenda";
         String usuario = "root";
         String senha = "root";
