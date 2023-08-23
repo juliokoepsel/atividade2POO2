@@ -37,6 +37,10 @@ public class Sistema {
         a.salvar(p);
         a.carregar(p);
 
+        p = new AgendaPersistenciaMySQL();
+        a.salvar(p);
+        a.carregar(p);
+
         System.out.println(a.toString());
 
     }
