@@ -30,6 +30,7 @@ public class Agenda {
     public void salvar(AgendaPersistencia persistencia) {
         try {
             persistencia.salvar(contatos);
+            System.out.println("Salvo!");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -38,6 +39,7 @@ public class Agenda {
     public void carregar(AgendaPersistencia persistencia) {
         try {
             contatos = persistencia.carregar();
+            System.out.println("Carregado!");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

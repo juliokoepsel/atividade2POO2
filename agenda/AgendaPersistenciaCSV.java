@@ -50,7 +50,6 @@ public class AgendaPersistenciaCSV implements AgendaPersistencia {
         Path csvFile = Paths.get("agenda.csv");
 
         ArrayList<Contato> contatos = new ArrayList<Contato>();
-        Contato contato;
 
         try (BufferedReader bufferedReader = Files.newBufferedReader(csvFile)) {
 
@@ -61,8 +60,7 @@ public class AgendaPersistenciaCSV implements AgendaPersistencia {
                 String[] atributos = linha.split(",");
                 String[] numeros = atributos[1].split("-");
 
-                contato = new Contato(atributos[0], LocalDate.of(Integer.parseInt(numeros[0]), Integer.parseInt(numeros[1]), Integer.parseInt(numeros[2])), atributos[2], atributos[3]);
-                contatos.add(contato);
+                contatos.add(new Contato(atributos[0], LocalDate.of(Integer.parseInt(numeros[0]), Integer.parseInt(numeros[1]), Integer.parseInt(numeros[2])), atributos[2], atributos[3]));
 
                 linha = bufferedReader.readLine();
             }
