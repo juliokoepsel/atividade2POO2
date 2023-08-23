@@ -7,7 +7,7 @@ public class Agenda {
     private ArrayList<Contato> contatos;
 
     public Agenda() {
-        this.contatos = new ArrayList<Contato>();
+        contatos = new ArrayList<Contato>();
     }
 
     public ArrayList<Contato> getContatos() {
@@ -28,11 +28,19 @@ public class Agenda {
     }
 
     public void salvar(AgendaPersistencia persistencia) {
-        persistencia.salvar();
+        try {
+            persistencia.salvar(contatos);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void carregar(AgendaPersistencia persistencia) {
-        persistencia.carregar();
+        try {
+            contatos = persistencia.carregar();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

@@ -19,5 +19,15 @@ public class Sistema {
 
         System.out.println(a.toString());
 
+        AgendaPersistencia p = new AgendaPersistenciaCSV();
+
+        a.salvar(p);
+
+        a = new Agenda();
+
+        a.carregar(p);
+
+        System.out.println(a.toString());
+
     }
 }

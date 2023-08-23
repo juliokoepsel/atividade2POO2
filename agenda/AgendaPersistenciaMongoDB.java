@@ -1,15 +1,17 @@
 package agenda;
 
+import java.util.ArrayList;
+
 public class AgendaPersistenciaMongoDB implements AgendaPersistencia {
 
     @Override
-    public void salvar() {
+    public void salvar(ArrayList<Contato> contatos) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'salvar'");
     }
 
     @Override
-    public void carregar() {
+    public ArrayList<Contato> carregar() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'carregar'");
     }
