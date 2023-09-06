@@ -12,8 +12,8 @@ public class AgendaPersistenciaMySQL implements AgendaPersistencia {
     @Override
     public void salvar(ArrayList<Contato> contatos) throws Exception {
 
-        //Class.forName("org.mariadb.jdbc.Driver");
-        String url = "jdbc:mysql://localhost:3306/agenda";
+        Class.forName("org.mariadb.jdbc.Driver");
+        String url = "jdbc:mysql://localhost/agenda";
         String usuario = "root";
         String senha = "root";
 
@@ -37,8 +37,8 @@ public class AgendaPersistenciaMySQL implements AgendaPersistencia {
     public ArrayList<Contato> carregar() throws Exception {
 
 
-        //Class.forName("org.mariadb.jdbc.Driver");
-        String url = "jdbc:mysql://localhost:3306/agenda";
+        Class.forName("org.mariadb.jdbc.Driver");
+        String url = "jdbc:mysql://localhost/agenda";
         String usuario = "root";
         String senha = "root";
 
