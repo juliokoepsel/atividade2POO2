@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <agenda>
-    <contato>
-        <nome>Fulano</nome>
-        <dataNascimento>2001-12-15</dataNascimento>
-        <telefone>(00)111-222-333</telefone>
-        <email>fulano@email.com</email>
-    </contato>
-    <contato>
-        <nome>Beltrano</nome>
-        <dataNascimento>1993-08-06</dataNascimento>
-        <telefone>(00)222-333-111</telefone>
-        <email>beltrano@email.com</email>
-    </contato>
-    <contato>
-        <nome>Sicrano</nome>
-        <dataNascimento>1964-07-24</dataNascimento>
-        <telefone>(00)333-111-222</telefone>
-        <email>sicrano@email.com</email>
-    </contato>
+<contato>
+<nome>Fulano</nome>
+<dataNascimento>2001-12-15</dataNascimento>
+<telefone>(00)111-222-333</telefone>
+<email>fulano@email.com</email>
+</contato>
+<contato>
+<nome>Beltrano</nome>
+<dataNascimento>1993-08-06</dataNascimento>
+<telefone>(00)222-333-111</telefone>
+<email>beltrano@email.com</email>
+</contato>
+<contato>
+<nome>Sicrano</nome>
+<dataNascimento>1964-07-24</dataNascimento>
+<telefone>(00)333-111-222</telefone>
+<email>sicrano@email.com</email>
+</contato>
 </agenda>

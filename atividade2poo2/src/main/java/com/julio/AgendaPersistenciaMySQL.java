@@ -1,21 +1,22 @@
-package agenda;
+package com.julio;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class AgendaPersistenciaMySQL implements AgendaPersistencia {
 
     @Override
-    public void salvar(ArrayList<Contato> contatos) throws Exception {
+    public void salvar(ArrayList<Contato> contatos) throws SQLException, ClassNotFoundException {
 
         Class.forName("org.mariadb.jdbc.Driver");
-        String url = "jdbc:mysql://localhost/agenda";
-        String usuario = "root";
-        String senha = "root";
+        String url = "jdbc:mariadb://localhost:3306/agenda";
+        String usuario = "julio";
+        String senha = "julio";
 
         try (Connection connection = DriverManager.getConnection(url, usuario, senha)) {
             String insertQuery = "INSERT INTO contato (id, nome, nascimento, telefone, email) VALUES (?, ?, ?, ?, ?)";
@@ -34,13 +35,13 @@ public class AgendaPersistenciaMySQL implements AgendaPersistencia {
     }
 
     @Override
-    public ArrayList<Contato> carregar() throws Exception {
+    public ArrayList<Contato> carregar() throws SQLException, ClassNotFoundException {
 
 
         Class.forName("org.mariadb.jdbc.Driver");
-        String url = "jdbc:mysql://localhost/agenda";
-        String usuario = "root";
-        String senha = "root";
+        String url = "jdbc:mariadb://localhost:3306/agenda";
+        String usuario = "julio";
+        String senha = "julio";
 
         ArrayList<Contato> contatos = new ArrayList<Contato>();
 

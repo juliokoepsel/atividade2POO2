@@ -1,4 +1,4 @@
-package agenda;
+package com.julio;
 
 import java.time.LocalDate;
 
@@ -27,18 +27,22 @@ public class Sistema {
 
         p = new AgendaPersistenciaCSV();
         a.salvar(p);
+        a.getContatos().clear();
         a.carregar(p);
 
         p = new AgendaPersistenciaXML();
         a.salvar(p);
+        a.getContatos().clear();
         a.carregar(p);
 
         p = new AgendaPersistenciaJSON();
         a.salvar(p);
+        a.getContatos().clear();
         a.carregar(p);
 
         p = new AgendaPersistenciaMySQL();
         a.salvar(p);
+        a.getContatos().clear();
         a.carregar(p);
 
         System.out.println(a.toString());

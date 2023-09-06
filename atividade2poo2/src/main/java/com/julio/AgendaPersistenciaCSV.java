@@ -1,4 +1,4 @@
-package agenda;
+package com.julio;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,7 +30,7 @@ public class AgendaPersistenciaCSV implements AgendaPersistencia {
                     .append("email")
                     .append(System.lineSeparator());
 
-            for (final var contato : contatos)
+            for (Contato contato : contatos)
                 stringBuilder.append(contato.getNome())
                         .append(',')
                         .append(contato.getDataNascimento())
