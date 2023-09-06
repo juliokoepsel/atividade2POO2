@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class Agenda {
     
     private ArrayList<Contato> contatos;
+    private AgendaPersistencia persistencia;
 
-    public Agenda() {
+    public Agenda(AgendaPersistencia persistencia) {
         contatos = new ArrayList<Contato>();
+        this.persistencia = persistencia;
     }
 
     public ArrayList<Contato> getContatos() {
@@ -16,6 +18,14 @@ public class Agenda {
 
     public void setContatos(ArrayList<Contato> contatos) {
         this.contatos = contatos;
+    }
+
+    public AgendaPersistencia getPersistencia() {
+        return persistencia;
+    }
+
+    public void setPersistencia(AgendaPersistencia persistencia) {
+        this.persistencia = persistencia;
     }
 
     @Override
@@ -27,7 +37,7 @@ public class Agenda {
         return aux + "]";
     }
 
-    public void salvar(AgendaPersistencia persistencia) {
+    public void salvar() {
         try {
             persistencia.salvar(contatos);
             System.out.println("Salvo!");
@@ -36,7 +46,7 @@ public class Agenda {
         }
     }
 
-    public void carregar(AgendaPersistencia persistencia) {
+    public void carregar() {
         try {
             contatos = persistencia.carregar();
             System.out.println("Carregado!");
