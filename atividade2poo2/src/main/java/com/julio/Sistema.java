@@ -50,10 +50,10 @@ public class Sistema {
         a.getContatos().clear();
         a.carregar(p);
 
-        p = new AgendaPersistenciaMongoDB();
-        a.salvar(p);
-        a.getContatos().clear();
-        a.carregar(p);
+        //p = new AgendaPersistenciaMongoDB();
+        //a.salvar(p);
+        //a.getContatos().clear();
+        //a.carregar(p);
 
         System.out.println(a.toString());
 
