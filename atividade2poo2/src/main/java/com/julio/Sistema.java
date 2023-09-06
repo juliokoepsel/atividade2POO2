@@ -7,7 +7,6 @@ public class Sistema {
         
         Agenda a = new Agenda(new AgendaPersistenciaCSV());
         Contato c;
-        AgendaPersistencia p;
 
         c = new Contato("Fulano", LocalDate.of(2001, 12, 15), "(00)111-222-333", "fulano@email.com");
         a.getContatos().add(c);
