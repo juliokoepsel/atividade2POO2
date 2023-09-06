@@ -37,7 +37,6 @@ public class AgendaPersistenciaMySQL implements AgendaPersistencia {
     @Override
     public ArrayList<Contato> carregar() throws SQLException, ClassNotFoundException {
 
-
         Class.forName("org.mariadb.jdbc.Driver");
         String url = "jdbc:mariadb://localhost:3306/agenda";
         String usuario = "julio";

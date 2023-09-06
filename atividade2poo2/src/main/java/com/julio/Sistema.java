@@ -40,7 +40,12 @@ public class Sistema {
         a.getContatos().clear();
         a.carregar(p);
 
-        p = new AgendaPersistenciaMySQL();
+        //p = new AgendaPersistenciaMySQL();
+        //a.salvar(p);
+        //a.getContatos().clear();
+        //a.carregar(p);
+
+        p = new AgendaPersistenciaPostgreSQL();
         a.salvar(p);
         a.getContatos().clear();
         a.carregar(p);
